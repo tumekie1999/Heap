@@ -1,0 +1,59 @@
+What is a heap data structure? (Use definition from your text)
+  A heap is a binary tree with two added properties:
+It is a complete tree and For each node, the node is less than or equal to both the left child and the right child.
+
+What is the difference between a minheap and a maxheap?
+  In a minheap the parent node is <= to both left and right children while in a maxheap the parent node is >= to both left and right children
+
+Look at the diagram below. Is this a minheap or maxheap?
+  maxheap
+
+What is a different definition of a "heap" as used in computer science? 
+  In certain programming languages including C and Pascal , a heap is an area of pre-reserved computer main storage ( memory ) that a program process can use to store data in some variable amount that won't be known until the program is running
+
+What is a complete binary tree? (Use text definition)
+  A tree is considered complete if it is balanced and all of the leaves at the bottom level are on the left side of the tree.
+
+Explain how the addElement method works
+it inserts an element at the next available complete location, it then compares with the element with root node(if available) and swap to top if the element added is less than the root node(for minheap) or swap to top if the element added is greater than the root node(for maxheap)
+
+Draw the heap created in ArrayHeapTester.java in its binary tree form (you mimic the ASCII drawing in the previous section)
+              1
+            /   \
+          3       2
+        /   \   /   \
+       5     6  7   10
+
+Redraw the heap as it exists after inserting 4
+              1
+            /   \
+          3       2
+        /   \   /   \
+       4     6  7   10
+      /
+     5
+
+test insert()
+expect: 1 3 2 5 6 7 10
+got:    1 3 2 5 6 7 10 
+test remove()
+expect: 2 3 7 5 6 10
+got:    2 3 7 5 6 10 
+test remove()
+expect: 3 5 7 10 6
+got:    3 5 7 10 6 
+test remove()
+expect: 5 6 7 10
+got:    5 6 7 10 
+test remove()
+expect: 6 10 7
+got:    6 10 7 
+test remove()
+expect: 7 10
+got:    7 10 
+test remove()
+expect: 10
+got:    10 
+test remove()
+expect:
+got:

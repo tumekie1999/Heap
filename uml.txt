@@ -1,0 +1,31 @@
+@startuml
+'http://www.plantuml.com/plantuml
+
+BinaryTreeADT <|-- ArrayBinaryTree
+ArrayBinaryTree <.. ArrayHeap
+
+Interface BinaryTreeADT {
+  +T getRootElement()
+  +boolean isEmpty()
+  +int size()
+  +boolean contains(T targetElement)
+  +T find(T targetElement)
+}
+
+class ArrayBinaryTree {
+  -BinaryTreeNode<T> root
+  +ArrayBinaryTree(T element)
+  +T getRootElement()
+  +boolean isEmpty()
+  +int size()
+  +boolean contains(T targetElement)
+  +T find(T targetElement)
+  +String toString()
+}
+
+class ArrayHeap {
+  +addElement(T element)
+  +T removeMin()
+}
+
+@enduml
