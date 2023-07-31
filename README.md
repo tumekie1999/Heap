@@ -15,7 +15,7 @@ activities. Put your answers in `result.txt`.
 2. What is the difference between a minheap and a maxheap?
 3. Look at the diagram below.  Is this a minheap or maxheap?
 
-![heap](./images/heap.png)
+![heap](./heap.png)
 
 4. What is a different definition of a "heap" as used in computer science?
 5. What is a complete binary tree? (Use text definition)
@@ -115,7 +115,7 @@ result in a rootless tree as shown below:
 ## Task 1: study the insert method
 The starter code implements `ArrayHeap` by extending `ArrayBinaryTree`, which uses an array to store the tree and implements `contains` and `find`. The `ArrayHeap` adds `addElement` and `removeMin` so that the array-based binary tree behaves like a minheap. The UML class diagram for this design is as follows:
 
-![class diagram](./images/class_diagram.png)
+![class diagram](./class_diagram.png)
 
 Study the code and answer the following questions in `result.txt`:
 1. Explain how the `addElement` method works.
